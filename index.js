@@ -2,11 +2,11 @@ const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
 const ytdl = require('ytdl-core');
 const yts = require('yt-search');
-const fs = require('fs');
 
-// 1. Dummy web server for Render port check
+// 1. Express server for Render port check
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 app.get('/', (req, res) => res.send('KingBot MD is running'));
 app.listen(PORT, () => console.log(`Port ${PORT} open`));
 
